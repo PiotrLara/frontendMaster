@@ -1,0 +1,107 @@
+:root {
+	--color1: hsl(31, 77%, 52%);
+	--color2: hsl(184, 100%, 22%);
+	--color3: hsl(179, 100%, 13%);
+	
+}
+
+
+body
+{
+	min-height: 90vh;
+	font-family: 'Lexend Deca', sans-serif;
+	background-color: hsl(0, 0%, 95%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+
+#container
+{
+	
+	max-width: 800px;
+	min-height: 500px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+	
+}
+
+.tile1, .tile2, .tile3 {
+	display: flex;
+	flex-direction: column;
+	min-height: 400px;
+	padding: 40px 40px 40px 40px;
+}
+.tile1 {
+	background-color: var(--color1);
+	border-radius: 10px 0px 0px 10px;
+}
+.tile2
+{
+	background-color: var(--color2);
+}
+
+.tile3 
+{
+	background-color: var(--color3);
+	border-radius: 0px 10px 10px 0px;
+}
+
+h1 
+{
+font-family: 'Big Shoulders Display';
+font-weight: bold;
+text-transform: uppercase;
+font-size: 35px;
+}
+
+.learn1, .learn2, .learn3 {
+	positiong: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+	background-color: white;
+	border-radius: 20px;
+	min-height: 40px;
+	max-width: 120px;
+	min-width: 80px;
+	border: 2px solid white;
+	transition-duration: 0.2s;
+}
+.learn1 {
+	color: var(--color1)
+}
+.learn2 {
+	color: var(--color2)
+}
+.learn3 {
+	color: var(--color3)
+}
+
+
+.learn1:hover, .learn2:hover, .learn3:hover
+{
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) 
+{
+	#container {
+	flex-direction: column;
+}
+.tile1
+{
+	border-radius: 10px 10px 0 0;
+}
+.tile3 
+{
+	border-radius: 0px 0px 10px 10px;
+}
